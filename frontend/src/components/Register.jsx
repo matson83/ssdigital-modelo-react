@@ -11,10 +11,10 @@ const Register = () => {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:8080/api/register.php', { email, password });
-            console.log(response.data); // Verifique o que a API está retornando
+            console.log(response.data);
             alert(response.data.message);
             if (response.data.message === "Usuário cadastrado com sucesso") {
-                navigate('/login'); // Redireciona para a página de login
+                navigate('/login');
             }
         } catch (error) {
             console.error(error);

@@ -1,12 +1,9 @@
 <?php
-// Permite o acesso a partir de qualquer origem
+
 header("Access-Control-Allow-Origin: *");
-// Permite os métodos POST, GET, OPTIONS, DELETE
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE");
-// Permite que o cabeçalho Content-Type seja usado
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
-// Se a requisição for do tipo OPTIONS (preflight request), o servidor deve apenas retornar os cabeçalhos acima
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }

@@ -23,7 +23,6 @@ const Login = () => {
                 alert(response.data.message);
             } else {
                 alert("Login bem-sucedido!");
-                // Aqui você pode redirecionar o usuário para outra página ou guardar o token de autenticação
             }
         } catch (error) {
             console.error("Erro ao logar", error);
